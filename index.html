@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction</title>
+    <title>Azyrova Group - Under Construction</title>
     <style>
         * {
             box-sizing: border-box;
@@ -15,60 +15,52 @@
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             min-height: 100vh;
             text-align: center;
         }
+        /* Full-width Top Banner Layout */
+        .banner-container {
+            width: 100%;
+            height: 250px; /* Adjust height based on your banner proportions */
+            overflow: hidden;
+            margin-bottom: 40px;
+            background-color: #f5f5f5;
+        }
+        .banner-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
         .container {
             max-width: 700px;
-            padding: 40px 20px;
+            padding: 0 20px 40px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
+        /* Customized Logo Layout */
+        .logo-image {
+            max-width: 220px; /* Limits the size so it looks elegant */
+            height: auto;
+            margin-bottom: 30px;
+        }
         h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 700;
             letter-spacing: 1px;
             text-transform: uppercase;
             margin-top: 0;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             color: #000000;
-        }
-        .graphic-container {
-            margin-bottom: 40px;
-        }
-        /* Created a stylized modern CSS barrier placeholder since external images can break */
-        .barrier-placeholder {
-            width: 180px;
-            height: 120px;
-            background: linear-gradient(45deg, #f39c12 25%, #2c3e50 25%, #2c3e50 50%, #f39c12 50%, #f39c12 75%, #2c3e50 75%, #2c3e50);
-            background-size: 40px 40px;
-            border-radius: 8px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-        .barrier-sign {
-            background-color: #f1c40f;
-            color: #000;
-            font-weight: bold;
-            padding: 10px;
-            border: 3px solid #000;
-            transform: rotate(-10deg);
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
         .message-top {
             font-size: 1.25rem;
             font-style: italic;
             color: #333333;
             line-height: 1.6;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
         .form-container {
             display: flex;
@@ -109,16 +101,17 @@
 </head>
 <body>
 
+    <!-- Top Banner Element -->
+    <div class="banner-container">
+        <img src="Azyrova_Group_banner_1_.jpg" alt="Azyrova Group Banner" class="banner-image">
+    </div>
+
     <div class="container">
+        <!-- Main Brand Logo Element -->
+        <img src="Azyrova_Final_logo_logo_scaled_under_5mb.png" alt="Azyrova Group Logo" class="logo-image">
+
         <h1>Under Construction</h1>
         
-        <div class="graphic-container">
-            <!-- Pure CSS graphic placeholder for the construction sign -->
-            <div class="barrier-placeholder">
-                <div class="barrier-sign">Under<br>Work</div>
-            </div>
-        </div>
-
         <p class="message-top">Our website is under construction, but we are ready to<br>go! Special surprise for our subscribers only</p>
         
         <div class="form-container">
