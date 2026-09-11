@@ -11,7 +11,7 @@
         padding: 0;
       }
       body {
-        font-family: -apple-system, sans-serif;
+        font-family: 'Orbitron', sans-serif;
         background: radial-gradient(circle, #1a1c24 0%, #0d0e12 100%);
         color: #ffffff;
         min-height: 100vh;
@@ -203,13 +203,54 @@
     </style>
   </head>
   <body>
-    <div class="app-container">
-      <div class="stage-3d">
+           <div class="app-container">
+      <!-- START OF RGB MAIN BOX UPDATE -->
+      <style>
+        @keyframes spinRGB {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        .main-rgb-card {
+          position: relative;
+          width: 100%;
+          max-width: 440px;
+          border-radius: 24px;
+          padding: 25px;
+          text-align: center;
+          box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+          transition: transform 0.5s ease, box-shadow 0.5s ease;
+          overflow: hidden; /* Clips the spinning colors perfectly to the border edge */
+          z-index: 1;
+          background: transparent;
+        }
+        /* The Background Layer: Stays 100% solid and perfectly still inside */
+        .main-rgb-card-bg {
+          position: absolute;
+          inset: 2px; /* Leaves exactly 2px space around the edge for the border line */
+          background: #14151c; /* Deep opaque card background color */
+          border-radius: 22px;
+          z-index: -1;
+        }
+        /* The Border Layer: Spins continuously on a wide canvas hidden behind the mask */
+        .main-rgb-card::before {
+          content: '';
+          position: absolute;
+          top: -50%; left: -50%; width: 200%; height: 200%;
+          background: conic-gradient(#ff0000, #ff7700, #ffea00, #00ff66, #00b4d8, #7a00ff, #ff00aa, #ff0000);
+          z-index: -2;
+          animation: spinRGB 4s linear infinite; /* Medium fast speed calibration */
+        }
+      </style>
+      
+      <div class="main-rgb-card">
+        <div class="main-rgb-card-bg"></div>
+      <!-- END OF RGB MAIN BOX UPDATE -->
+
         <div class="banner-view">
           <img src="./Azyrova_Group_banner_1_.webp" alt="Banner" class="banner-image" />
         </div>
         <div class="avatar-view">
-       <img src="Azyrova_Final_logo_scaled_under_5mb.webp" alt="Logo" class="logo-image" />
+          <img src="Azyrova_Final_logo_scaled_under_5mb.webp" alt="Logo" class="logo-image" />
         </div>
         <h1>Azyrova Group</h1>
         <p class="bio">Making online shopping better with quality products, honest value, and trusted service. 🛒✨</p>
@@ -254,7 +295,12 @@
               ></path>
             </svg>
           </a>
-          <a href="https://facebook.com/groups/1176646404678235" target="_blank" class="social-link" title="Facebook Group">
+          <a
+            href="https://facebook.com/groups/1176646404678235"
+            target="_blank"
+            class="social-link"
+            title="Facebook Group"
+          >
             <svg viewBox="0 0 576 512">
               <path
                 d="M528 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-352 96c26.5 0 48 21.5 48 48s-21.5 48-48 48-48-21.5-48-48 21.5-48 48-48zm0 256c-44.2 0-80-35.8-80-80v-16c0-17.7 14.3-32 32-32h96c17.7 0 32 14.3 32 32v16c0 44.2-35.8 80-80 80zm224-128c-17.7 0-32-14.3-32-32v-16c0-44.2 35.8-80 80-80s80 35.8 80 80v16c0 17.7-14.3 32-32 32H400zm80-128c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48z"
@@ -271,53 +317,171 @@
         </div>
       </div>
 
-      <div class="qr-display-box">
-        <img src="./Azyrova Group_GoogleQR_2026-09-11-153326_image.webp" alt="Google QR Code" class="qr-image-asset" />
-        <p>
-          Scan to explore
-          <strong>Azyrova Group</strong>
+      <!-- Ultra-Premium Cosmic Breathing Box (Self-Contained UI Asset) -->
+      <div
+        class="qr-display-box"
+        style="
+          background: rgba(20, 21, 28, 0.4);
+          border: 1px solid rgba(160, 32, 240, 0.2);
+          padding: 28px 22px;
+          border-radius: 28px;
+          text-align: center;
+          max-width: 244px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 18px;
+          backdrop-filter: blur(25px);
+          -webkit-backdrop-filter: blur(25px);
+          box-shadow:
+            0 15px 35px rgba(160, 32, 240, 0.15),
+            inset 0 1px 1px rgba(255, 255, 255, 0.1);
+          animation: ultraBreathingGlow 5s ease-in-out infinite;
+          transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+          cursor: pointer;
+          position: relative;
+          overflow: hidden;
+        "
+        onmouseenter="
+          this.style.animationPlayState = 'paused';
+          this.style.transform = 'scale(1.04) translateY(-4px)';
+          this.style.boxShadow = '0 30px 60px rgba(255, 215, 0, 0.35), inset 0 1px 2px rgba(255, 255, 255, 0.2)';
+          this.style.borderColor = 'rgba(255, 215, 0, 0.6)';
+        "
+        onmouseleave="
+          this.style.animationPlayState = 'running';
+          this.style.transform = '';
+          this.style.boxShadow = '';
+          this.style.borderColor = '';
+        "
+      >
+        <!-- Light-Reflective Glare Effect Line -->
+        <div
+          style="
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(60deg, transparent, rgba(255, 255, 255, 0.03), transparent);
+            pointer-events: none;
+          "
+        ></div>
+
+        <!-- Glow-Synced QR Image Mask -->
+        <div
+          style="
+            background: #ffffff;
+            padding: 10px;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 180px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            transition: transform 0.4s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          "
+          onmouseenter="this.style.transform = 'scale(1.03) rotate(1deg)'"
+          onmouseleave="this.style.transform = 'scale(1) rotate(0deg)'"
+        >
+          <img
+            src="Azyrova Group_GoogleQR_2026-09-11-153326_image.webp"
+            alt="Google QR"
+            style="width: 100%; height: auto; object-fit: contain; border-radius: 6px"
+          />
+        </div>
+
+        <!-- Premium Fluid Typography -->
+        <p
+          style="
+            font-size: 0.78rem;
+            color: #8a8f98;
+            line-height: 1.45;
+            margin: 0;
+            padding: 0 4px;
+            letter-spacing: 0.2px;
+            transition: color 0.4s ease;
+          "
+          onmouseenter="this.style.color = '#ffffff'"
+          onmouseleave="this.style.color = '#8a8f98'"
+        >
+          Scan to explore <strong
+            style="color: #ffffff; font-weight: 600; transition: color 0.4s"
+            onmouseenter="this.style.color = '#ff9900'"
+          >
+            Azyrova Group
+          </strong>
           on Google.
         </p>
       </div>
-    </div>
-    <!-- Closes app-container -->
 
-    <!-- This is where your Live Log Text engine script belongs -->
-    <script>
-      const logs = [
-        "> Syncing e-commerce mesh...",
-        "> Optimizing Azyrova assets...",
-        "> Compiling custom catalog...",
-        "> Systems optimal. Standby...",
-        "> Initializing Azyrova cloud network...",
-        "> Deploying secure transaction layers...",
-        "> Syncing globally distributed edge caches...",
-        "> Compiling dynamic catalog matrix...",
-        "> Optimizing customer database vectors...",
-        "> Injecting quantum encryption protocols...",
-        "> Structuring smart product filtration grids...",
-        "> Mapping ultra-fast logistic shipping nodes...",
-        "> Calibrating live currency exchange mesh...",
-        "> Building merchant API communication gates...",
-        "> Formatting automated refund routing logic...",
-        "> Resolving bandwidth pipeline latencies...",
-        "> Hardening server perimeter defense grids...",
-        "> Refreshing dynamic store inventory tokens...",
-        "> Indexing premium brand retail manifests...",
-        "> Polishing responsive checkout frameworks...",
-        "> Running synthetic network traffic loads...",
-        "> Verification complete: Cloud status clean...",
-        "> Finalizing administrative control matrix...",
-        "> Systems optimal. Ready for global deploy...",
-      ];
-      let idx = 0;
-      setInterval(() => {
-        const el = document.getElementById("log-text");
-        if (el) {
-          el.textContent = logs[idx];
-          idx = (idx + 1) % logs.length;
+      <!-- Hardware-Accelerated Cinematic Ambient Ray Keyframes -->
+      <style>
+        @keyframes ultraBreathingGlow {
+          0%,
+          100% {
+            transform: translateY(0px) scale(1);
+            box-shadow:
+              0 15px 35px rgba(160, 32, 240, 0.2),
+              inset 0 1px 1px rgba(255, 255, 255, 0.1);
+            border-color: rgba(160, 32, 240, 0.15);
+          }
+          50% {
+            transform: translateY(-3px) scale(1.015);
+            box-shadow:
+              0 25px 50px rgba(255, 215, 0, 0.35),
+              inset 0 1px 1px rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 215, 0, 0.35);
+          }
         }
-      }, 1300);
-    </script>
+      </style>
+
+      <!-- Closes app-container -->
+
+      <!-- This is where your Live Log Text engine script belongs -->
+      <script>
+        const logs = [
+          "> Core matrix online...",
+          "> Fetching site metadata...",
+          "> Loading custom assets...",
+          "> Syncing cloud database...",
+          "> Tuning network engine...",
+          "> Security audit clean...",
+          "> Initializing user space...",
+          "> Resolving edge delays...",
+          "> Verifying API keys...",
+          "> Mounting store vectors...",
+          "> Polishing grid filters...",
+          "> Indexing premium items...",
+          "> Linking secure checkout...",
+          "> Refreshing login keys...",
+          "> Testing data pathways...",
+          "> Clearing platform cache...",
+          "> Calibrating system values...",
+          "> Encoding store registry...",
+          "> Optimizing pixel assets...",
+          "> Loading global rules...",
+          "> Checking local servers...",
+          "> Speed profiling done...",
+          "> Setting up cart core...",
+          "> Syncing delivery nodes...",
+          "> Checking host backup...",
+          "> Handshake verified...",
+          "> Script files stable...",
+          "> Building display grids...",
+          "> System layout optimal...",
+          "> Standby for deployment...",
+        ];
+        let idx = 0;
+        setInterval(() => {
+          const el = document.getElementById("log-text");
+          if (el) {
+            el.textContent = logs[idx];
+            idx = (idx + 1) % logs.length;
+          }
+        }, 1300);
+      </script>
+    </div>
   </body>
 </html>
