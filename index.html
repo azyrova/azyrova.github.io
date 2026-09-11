@@ -11,7 +11,7 @@
         padding: 0;
       }
       body {
-        font-family: 'Orbitron', sans-serif;
+        font-family: "Orbitron", sans-serif;
         background: radial-gradient(circle, #1a1c24 0%, #0d0e12 100%);
         color: #ffffff;
         min-height: 100vh;
@@ -203,12 +203,16 @@
     </style>
   </head>
   <body>
-           <div class="app-container">
+    <div class="app-container">
       <!-- START OF RGB MAIN BOX UPDATE -->
       <style>
         @keyframes spinRGB {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
         }
         .main-rgb-card {
           position: relative;
@@ -218,7 +222,9 @@
           padding: 25px;
           text-align: center;
           box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
-          transition: transform 0.5s ease, box-shadow 0.5s ease;
+          transition:
+            transform 0.5s ease,
+            box-shadow 0.5s ease;
           overflow: hidden; /* Clips the spinning colors perfectly to the border edge */
           z-index: 1;
           background: transparent;
@@ -233,24 +239,27 @@
         }
         /* The Border Layer: Spins continuously on a wide canvas hidden behind the mask */
         .main-rgb-card::before {
-          content: '';
+          content: "";
           position: absolute;
-          top: -50%; left: -50%; width: 200%; height: 200%;
+          top: -50%;
+          left: -50%;
+          width: 200%;
+          height: 200%;
           background: conic-gradient(#ff0000, #ff7700, #ffea00, #00ff66, #00b4d8, #7a00ff, #ff00aa, #ff0000);
           z-index: -2;
           animation: spinRGB 4s linear infinite; /* Medium fast speed calibration */
         }
       </style>
-      
+
       <div class="main-rgb-card">
         <div class="main-rgb-card-bg"></div>
-      <!-- END OF RGB MAIN BOX UPDATE -->
+        <!-- END OF RGB MAIN BOX UPDATE -->
 
         <div class="banner-view">
-          <img src="./Azyrova_Group_banner_1_.webp" alt="Banner" class="banner-image" />
+          <img src="Azyrova_Group_banner_1_.jpg" alt="Azyrova Group Banner" class="banner-image" />
         </div>
-        <div class="logo-view">
-          <img src="Azyrova_Final_logo_scaled_under_5mb.webp" alt="Logo" class="logo-image" />
+        <div class="avatar-view">
+          <img src="Azyrova_Final_logo_scaled_under_5mb.png" alt="Azyrova Group Logo" class="logo-image" />
         </div>
         <h1>Azyrova Group</h1>
         <p class="bio">Making online shopping better with quality products, honest value, and trusted service. 🛒✨</p>
@@ -406,7 +415,8 @@
           onmouseenter="this.style.color = '#ffffff'"
           onmouseleave="this.style.color = '#8a8f98'"
         >
-          Scan to explore <strong
+          Scan to explore
+          <strong
             style="color: #ffffff; font-weight: 600; transition: color 0.4s"
             onmouseenter="this.style.color = '#ff9900'"
           >
