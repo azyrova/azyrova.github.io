@@ -199,6 +199,7 @@
       color: #0d0e12;
       font-weight: bold;
       cursor: pointer;
+      transition: 0.3s;
     }
 
     .glow-btn:hover {
@@ -339,8 +340,8 @@
             <span id="log-text">&gt; Initializing core...</span> _
           </div>
 
-          <form class="form-layout" onsubmit="return false;">
-            <input type="email" name="email" class="email-field" placeholder="Enter your email address" required>
+          <form class="form-layout" action="mailto:azyrova.business@gmail.com" method="POST" enctype="text/plain">
+            <input type="email" name="Subscriber Email" class="email-field" placeholder="Enter your email address" required>
             <button type="submit" class="glow-btn">Notify When Ready</button>
           </form>
 
@@ -448,7 +449,6 @@
     ];
 
     let index = 0;
-
     setInterval(() => {
       const logText = document.getElementById("log-text");
       if (logText) {
