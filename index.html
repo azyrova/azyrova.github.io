@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Azyrova Group</title>
 
+  <!-- MailerLite Font Import -->
+  <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1788452");</style>
+
+  <!-- MailerLite Universal Script -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2630756');
+  </script>
+
   <style>
     * {
       box-sizing: border-box;
@@ -76,12 +85,8 @@
     }
 
     @keyframes hueCycle {
-      0% {
-        filter: hue-rotate(0deg);
-      }
-      100% {
-        filter: hue-rotate(360deg);
-      }
+      0% { filter: hue-rotate(0deg); }
+      100% { filter: hue-rotate(360deg); }
     }
 
     /* BANNER */
@@ -206,6 +211,12 @@
       filter: brightness(1.1);
     }
 
+    .ml-form-successBody {
+      color: #00ff66;
+      font-size: 0.9rem;
+      padding: 10px 0;
+    }
+
     /* SOCIALS */
     .social-nodes {
       display: flex;
@@ -260,12 +271,8 @@
     }
 
     @keyframes breathing {
-      0%, 100% {
-        transform: translateY(0) scale(1);
-      }
-      50% {
-        transform: translateY(-3px) scale(1.015);
-      }
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-3px) scale(1.015); }
     }
 
     .qr-image-wrapper {
@@ -340,58 +347,51 @@
             <span id="log-text">&gt; Initializing core...</span> _
           </div>
 
-          <form class="form-layout" action="mailto:azyrova.business@gmail.com" method="POST" enctype="text/plain">
-            <input type="email" name="Subscriber Email" class="email-field" placeholder="Enter your email address" required>
-            <button type="submit" class="glow-btn">Notify When Ready</button>
-          </form>
+          <!-- EMBEDDED FORM -->
+          <div id="mlb2-198357290154198682" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-198357290154198682">
+            <div class="ml-form-embedWrapper embedForm">
+              
+              <div class="row-form">
+                <form class="ml-block-form form-layout" action="https://assets.mailerlite.com/jsonp/2630756/forms/198357290154198682/subscribe" method="post" target="ml_iframe" onsubmit="document.querySelector('.row-form').style.display='none'; document.querySelector('.row-success').style.display='block';">
+                  <input type="email" class="email-field" name="fields[email]" placeholder="Enter your email address" autocomplete="email" required>
+                  <input type="hidden" name="ml-submit" value="1">
+                  <input type="hidden" name="anticsrf" value="true">
+                  <button type="submit" class="glow-btn">Notify When Ready</button>
+                </form>
+                <iframe name="ml_iframe" style="display:none;"></iframe>
+              </div>
+
+              <div class="row-success" style="display:none">
+                <div class="ml-form-successBody">
+                  <p><strong>Thank you!</strong> You have successfully subscribed to our launch notifications.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
 
         </div>
 
         <!-- SOCIAL LINKS -->
         <div class="social-nodes">
-
-          <!-- WhatsApp -->
           <a href="https://wa.me/919382699704" target="_blank" rel="noopener noreferrer" class="social-link" title="WhatsApp">
-            <svg viewBox="0 0 448 512">
-              <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
-            </svg>
+            <svg viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
           </a>
-
-          <!-- Instagram -->
           <a href="https://instagram.com/azyrovagroup" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram">
-            <svg viewBox="0 0 448 512">
-              <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
-            </svg>
+            <svg viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8-26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
           </a>
-
-          <!-- Telegram -->
           <a href="https://t.me/azyrova_group" target="_blank" rel="noopener noreferrer" class="social-link" title="Telegram">
-            <svg viewBox="0 0 496 512">
-              <path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/>
-            </svg>
+            <svg viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg>
           </a>
-
-          <!-- Facebook -->
           <a href="https://www.facebook.com/azyrova" target="_blank" rel="noopener noreferrer" class="social-link" title="Facebook">
-            <svg viewBox="0 0 320 512">
-              <path d="M80 299.3V256H12v-54.7h68v-40.7c0-67.4 41.1-104 101.2-104 28.8 0 53.6 2.1 60.8 3.1v70.5h-41.7c-32.7 0-39 15.6-39 38.3V201.3h78l-10.2 54.7H160.2v165.1H80z"/>
-            </svg>
+            <svg viewBox="0 0 320 512"><path d="M80 299.3V256H12v-54.7h68v-40.7c0-67.4 41.1-104 101.2-104 28.8 0 53.6 2.1 60.8 3.1v70.5h-41.7c-32.7 0-39 15.6-39 38.3V201.3h78l-10.2 54.7H160.2v165.1H80z"/></svg>
           </a>
-
-          <!-- Facebook Group -->
           <a href="https://facebook.com/groups/1176646404678235" target="_blank" rel="noopener noreferrer" class="social-link" title="Facebook Group">
-            <svg viewBox="0 0 576 512">
-              <path d="M528 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-352 96c26.5 0 48 21.5 48 48s-21.5 48-48 48-48-21.5-48-48 21.5-48 48-48zm0 256c-44.2 0-80-35.8-80-80v-16c0-17.7 14.3-32 32-32h96c17.7 0 32 14.3 32 32v16c0 44.2-35.8 80-80 80zm224-128c-17.7 0-32-14.3-32-32v-16c0-44.2 35.8-80 80-80s80 35.8 80 80v16c0 17.7-14.3 32-32 32H400zm80-128c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48z"/>
-            </svg>
+            <svg viewBox="0 0 576 512"><path d="M528 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-352 96c26.5 0 48 21.5 48 48s-21.5 48-48 48-48-21.5-48-48 21.5-48 48-48zm0 256c-44.2 0-80-35.8-80-80v-16c0-17.7 14.3-32 32-32h96c17.7 0 32 14.3 32 32v16c0 44.2-35.8 80-80 80zm224-128c-17.7 0-32-14.3-32-32v-16c0-44.2 35.8-80 80-80s80 35.8 80 80v16c0 17.7-14.3 32-32 32H400zm80-128c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48z"/></svg>
           </a>
-
-          <!-- YouTube -->
           <a href="https://www.youtube.com/@azyrova" target="_blank" rel="noopener noreferrer" class="social-link" title="YouTube">
-            <svg viewBox="0 0 576 512">
-              <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 68 288 68 288 68S117.22 68 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 444 288 444 288 444s170.78 0 213.371-7.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/>
-            </svg>
+            <svg viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 68 288 68 288 68S117.22 68 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 444 288 444 288 444s170.78 0 213.371-7.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
           </a>
-
         </div>
 
       </div>
@@ -413,7 +413,7 @@
 
   </div>
 
-  <!-- LIVE LOG -->
+  <!-- LIVE LOG SCRIPT -->
   <script>
     const logs = [
       "> Core matrix online...",
@@ -457,6 +457,16 @@
       }
     }, 1300);
   </script>
+
+  <!-- MAILERLITE SUCCESS CALLBACK -->
+  <script>
+    function ml_webform_success_198357290154198682() {
+      var $ = ml_jQuery || jQuery;
+      $('.row-success').show();
+      $('.row-form').hide();
+    }
+  </script>
+  <script src="https://gassets.mlcdn.com/assets/form/embed.js?v30" type="text/javascript"></script>
 
 </body>
 </html>
